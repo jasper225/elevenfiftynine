@@ -1,0 +1,10 @@
+const express = require("express");
+const router = express.Router();
+const { protect } = require("../middleware/auth");
+// TODO: const ctrl = require("../controllers/cards");
+router.get("/",       protect, (req, res) => res.json({ message: "cards GET /" }));
+router.post("/",      protect, (req, res) => res.json({ message: "cards POST /" }));
+router.get("/:id",    protect, (req, res) => res.json({ message: "cards GET /:id" }));
+router.put("/:id",    protect, (req, res) => res.json({ message: "cards PUT /:id" }));
+router.delete("/:id", protect, (req, res) => res.json({ message: "cards DELETE /:id" }));
+module.exports = router;
