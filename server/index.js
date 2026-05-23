@@ -1,15 +1,16 @@
+const dotenv = require("dotenv");
+dotenv.config();
+
 const express = require("express");
 const http = require("http");
 const cors = require("cors");
 const morgan = require("morgan");
-const dotenv = require("dotenv");
 const { Server } = require("socket.io");
 const connectDB = require("./config/db");
 const passport = require("./config/passport");
 const { initSockets } = require("./sockets");
 const cookieParser = require("cookie-parser");
 
-dotenv.config();
 connectDB();
 
 const app = express();

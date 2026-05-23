@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const { protect } = require("../middleware/auth");
-// TODO: const ctrl = require("../controllers/auth");
-router.get("/",       protect, (req, res) => res.json({ message: "auth GET /" }));
-router.post("/",      protect, (req, res) => res.json({ message: "auth POST /" }));
-router.get("/:id",    protect, (req, res) => res.json({ message: "auth GET /:id" }));
-router.put("/:id",    protect, (req, res) => res.json({ message: "auth PUT /:id" }));
-router.delete("/:id", protect, (req, res) => res.json({ message: "auth DELETE /:id" }));
+const { register, login, refresh, logout } = require("../controllers/auth");
+
+router.post("/register", register);
+router.post("/login", login);
+router.post("/refresh", refresh);
+router.post("/logout", logout);
+
 module.exports = router;
