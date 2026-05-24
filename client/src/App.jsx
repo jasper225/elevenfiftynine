@@ -6,7 +6,7 @@ import LoginPage      from "./pages/LoginPage";
 import RegisterPage   from "./pages/RegisterPage";
 import DashboardPage  from "./pages/DashboardPage";
 import BoardPage      from "./pages/BoardPage";
-import WorkspacePage  from "./pages/WorkspacePage";
+import SemesterPage  from "./pages/SemesterPage";
 import ProfilePage    from "./pages/ProfilePage";
 import NotFoundPage   from "./pages/NotFoundPage";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
@@ -22,7 +22,7 @@ export default function App() {
 
       <Route element={<ProtectedRoute />}>
         <Route path="/dashboard"              element={<DashboardPage />} />
-        <Route path="/workspace/:workspaceId" element={<WorkspacePage />} />
+        <Route path="/semester/:semesterId" element={<SemesterPage />} />
         <Route path="/board/:boardId"         element={<BoardPage />} />
         <Route path="/profile"               element={<ProfilePage />} />
       </Route>

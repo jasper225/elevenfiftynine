@@ -6,8 +6,9 @@ import CardItem from '../components/card/CardItem';
 
 export default function BoardPage() { 
     const [lists, setLists] = React.useState([
-        { id: 'list-1', title: 'Due', cards: ['Assignment 1', 'Assignment 2'] },
-        { id: 'list-2', title: 'Submitted', cards: ['Assignment 3', 'Assignment 4'] },
+        { id: 'list-1', title: 'Due', cards: ['Assignment 3', 'Assignment 4'] },
+        { id: 'list-2', title: 'Submitted', cards: ['Assignment 5', 'Assignment 6'] },
+        { id: 'list-3', title: 'Graded', cards: ['Assignment 1', 'Assignment 2'] },
     ]);
     
  function handleDragEnd(event) {
