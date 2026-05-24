@@ -31,7 +31,7 @@ app.use(cookieParser());
 
 // Routes
 app.use("/api/auth",      require("./routes/auth"));
-app.use("/api/workspaces", require("./routes/workspaces"));
+app.use("/api/semesters", require("./routes/semesters"));
 app.use("/api/boards",    require("./routes/boards"));
 app.use("/api/lists",     require("./routes/lists"));
 app.use("/api/cards",     require("./routes/cards"));
@@ -44,4 +44,4 @@ app.get("/api/health", (req, res) => res.json({ status: "ok" }));
 app.use(require("./middleware/errorHandler"));
 
 const PORT = process.env.PORT || 5000;
-httpServer.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+httpServer.listen(PORT, () => console.log(`Server running on port ${PORT}`));

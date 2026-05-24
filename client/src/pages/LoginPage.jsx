@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { authStore } from '../stores/authStore';
 import { useAuthStore } from '../store/authStore';
 
 

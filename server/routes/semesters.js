@@ -1,0 +1,10 @@
+const express = require("express");
+const router = express.Router();
+const { protect } = require("../middleware/auth");
+// TODO: const ctrl = require("../controllers/workspaces");
+router.get("/",       protect, (req, res) => res.json({ message: "semesters GET /" }));
+router.post("/",      protect, (req, res) => res.json({ message: "semesters POST /" }));
+router.get("/:id",    protect, (req, res) => res.json({ message: "semesters GET /:id" }));
+router.put("/:id",    protect, (req, res) => res.json({ message: "semesters PUT /:id" }));
+router.delete("/:id", protect, (req, res) => res.json({ message: "semesters DELETE /:id" }));
+module.exports = router;

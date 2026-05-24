@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const workspaceSchema = new mongoose.Schema({
+const semesterSchema = new mongoose.Schema({
   name:        { type: String, required: true, trim: true },
   description: String,
   owner:       { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
@@ -7,4 +7,4 @@ const workspaceSchema = new mongoose.Schema({
   logo:        String,
   slug:        { type: String, unique: true },
 }, { timestamps: true });
-module.exports = mongoose.model("Workspace", workspaceSchema);
+module.exports = mongoose.model("Semester", semesterSchema);
