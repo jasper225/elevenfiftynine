@@ -16,7 +16,7 @@ export default function DashboardPage() {
         {courses.map((course) => (
           <div
             key={course.id}
-            onClick={() => navigate(`/board/${course.id}`)}
+            onClick={() => navigate(`/course/${course.id}`)}
             className="p-6 bg-blue-600 text-white rounded-lg shadow cursor-pointer hover:bg-blue-700"
           >
             <h2 className="text-xl font-bold">{course.name}</h2>

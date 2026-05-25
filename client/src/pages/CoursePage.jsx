@@ -4,7 +4,7 @@ import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable'
 import { arrayMove } from '@dnd-kit/sortable';
 import CardItem from '../components/card/CardItem';
 
-export default function BoardPage() { 
+export default function CoursePage() { 
     const [lists, setLists] = React.useState([
         { id: 'list-1', title: 'Due', cards: ['Assignment 3', 'Assignment 4'] },
         { id: 'list-2', title: 'Submitted', cards: ['Assignment 5', 'Assignment 6'] },
@@ -49,8 +49,8 @@ export default function BoardPage() {
     
     return (
         <DndContext onDragEnd={handleDragEnd}>
-        <div className="board-page">
-        <h1>Board Page</h1>
+        <div className="course-page">
+        <h1>Course Page</h1>
         <div style={{ display: "flex", gap: "16px" }}>
 
         {lists.map((list) => (

@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const { protect } = require("../middleware/auth");
-// TODO: const ctrl = require("../controllers/lists");
-router.get("/",       protect, (req, res) => res.json({ message: "lists GET /" }));
-router.post("/",      protect, (req, res) => res.json({ message: "lists POST /" }));
-router.get("/:id",    protect, (req, res) => res.json({ message: "lists GET /:id" }));
-router.put("/:id",    protect, (req, res) => res.json({ message: "lists PUT /:id" }));
-router.delete("/:id", protect, (req, res) => res.json({ message: "lists DELETE /:id" }));
+const { getLists, addCard, getCard, updateCard, deleteCard, moveCard } = require("../controllers/list");
+router.get("/:boardId", protect, getLists);
+router.post("/:listId/cards", protect, addCard);
+router.get("/:listId/cards", protect, getCard);
+router.put("/:listId/cards/:cardId", protect, updateCard);
+router.delete("/:listId/cards/:cardId", protect, deleteCard);
 module.exports = router;

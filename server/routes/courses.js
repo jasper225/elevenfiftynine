@@ -1,0 +1,10 @@
+const express = require("express");
+const router = express.Router();
+const { protect } = require("../middleware/auth");
+const { createCourse, getCourses, getCourseById, updateCourse, deleteCourse } = require("../controllers/course");
+router.post("/",      protect, createCourse);
+router.get("/",       protect, getCourses);
+router.get("/:id",    protect, getCourseById);
+router.post("/:id",    protect, updateCourse);
+router.delete("/:id", protect, deleteCourse);
+module.exports = router;

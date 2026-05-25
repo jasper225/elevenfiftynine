@@ -1,16 +1,16 @@
 import { create } from "zustand";
 import api from "../services/api";
 
-export const useBoardStore = create((set, get) => ({
-  boards: [], currentBoard: null, lists: [], loading: false, error: null,
-  fetchBoards: async (workspaceId) => {
+export const useCourseStore = create((set, get) => ({
+  courses: [], currentCourse: null, lists: [], loading: false, error: null,
+  fetchCourses: async (semesterId) => {
     set({ loading: true });
-    try { const { data } = await api.get(`/workspaces/${workspaceId}/boards`); set({ boards: data, loading: false }); }
+    try { const { data } = await api.get(`/semesters/${semesterId}/courses`); set({ courses: data, loading: false }); }
     catch (err) { set({ error: err.message, loading: false }); }
   },
-  fetchBoard: async (boardId) => {
+  fetchCourse: async (courseId) => {
     set({ loading: true });
-    try { const { data } = await api.get(`/boards/${boardId}`); set({ currentBoard: data.board, lists: data.lists, loading: false }); }
+    try { const { data } = await api.get(`/courses/${courseId}`); set({ currentCourse: data.course, lists: data.lists, loading: false }); }
     catch (err) { set({ error: err.message, loading: false }); }
   },
   moveCard: (cardId, sourceListId, destListId, newPosition) => {
