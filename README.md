@@ -19,22 +19,6 @@ A full-featured assignment tracker app built with the MERN stack.
 - Cloudinary account (free tier works)
 - Google Cloud project with OAuth credentials
 
-### Setup
-
-```bash
-# Clone and install
-git clone <your-repo-url>
-
-# Backend
-cd server && cp .env.example .env
-# Fill in .env values
-npm install && npm run dev
-
-# Frontend (new terminal)
-cd client && cp .env.example .env
-npm install && npm run dev
-```
-
 App runs at `http://localhost:5173`, API at `http://localhost:5000`.
 
 ## Features
