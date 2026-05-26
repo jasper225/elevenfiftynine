@@ -32,10 +32,6 @@ App runs at `http://localhost:5173`, API at `http://localhost:5000`.
 - ✅ Activity log per board
 - ✅ File attachments via Cloudinary
 
-## Project Structure
-
-See the directory tree below for full layout.
-
 ## Deployment
 
 - **Frontend** → Vercel (connect GitHub repo, auto-deploy)
