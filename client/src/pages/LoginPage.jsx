@@ -4,10 +4,10 @@ import { useAuthStore } from '../store/authStore';
 
 
 export default function LoginPage() { 
-    
+    const navigate = useNavigate();
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
-    const { login } = authStore();
+    const { login } = useAuthStore();
 
     const handleSubmit = async (e) => {
         e.preventDefault();

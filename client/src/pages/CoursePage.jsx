@@ -9,6 +9,7 @@ export default function CoursePage() {
         { id: 'list-1', title: 'Due', cards: ['Assignment 3', 'Assignment 4'] },
         { id: 'list-2', title: 'Submitted', cards: ['Assignment 5', 'Assignment 6'] },
         { id: 'list-3', title: 'Graded', cards: ['Assignment 1', 'Assignment 2'] },
+        { id: 'list-4', title: 'Upcoming', cards: ['Test 2', 'Quiz 4'] },
     ]);
     
  function handleDragEnd(event) {
@@ -63,7 +64,7 @@ export default function CoursePage() {
             </SortableContext>
           </div>
         ))}
-
+            <button style={{ height: "40px", alignSelf: "start" }}>+ Add Assignment</button>
             </div>
         </div>
     </DndContext>

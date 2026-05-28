@@ -27,9 +27,7 @@ export default function RegisterPage() {
                 <button type="submit">Register</button>
             </form>
             <p>Already have an account? <a href="/login">Login here</a></p>
-            if (name && email && password) {
-                navigate('/dashboard')
-            }
+            
         </div>
     );
 }
