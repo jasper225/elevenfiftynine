@@ -18,7 +18,6 @@ export default function CoursePage() {
 
   const sourceList = lists.find((list) => list.cards.includes(active.id));
   
-  // check if dropping onto a list directly, or onto a card
   let destList = lists.find((list) => list.cards.includes(over.id));
   if (!destList) destList = lists.find((list) => list.id === over.id);
 
