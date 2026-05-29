@@ -8,7 +8,7 @@ export default function NavigationBar() {
                 <li><a href="/dashboard" className="hover:underline">Dashboard</a></li>
                 <li><a href="/semesters" className="hover:underline">Semesters</a></li>
                 <li><a href="/profile" className="hover:underline">Profile</a></li>
-                <li><a href="/logout" className="hover:underline">Logout</a></li>
+                <li><a href="/" className="hover:underline">Logout</a></li>
             </ul>
         </nav>
     </div>; 
