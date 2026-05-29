@@ -1,4 +1,6 @@
 import React from 'react';
+import NavigationBar from '../components/navbar/NavigationBar';
+
 
 const user = {
   username: 'John Doe',
@@ -13,6 +15,7 @@ const courses = [
 
 export default function ProfilePage() { return (
     <div className="profile-page p-8">
+        <NavigationBar />
         <h1 className="text-3xl font-bold mb-6">Profile</h1>
         <div className="mb-4">
             <h2 className="text-xl font-semibold">Username:</h2>

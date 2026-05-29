@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import NavigationBar from '../components/navbar/NavigationBar';
+
 
 export default function LandingPage() { 
     const navigate = useNavigate();

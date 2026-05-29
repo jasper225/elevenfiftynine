@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import NavigationBar from '../components/navbar/NavigationBar';
 
 
 
@@ -11,11 +12,12 @@ export default function SemestersPage() {
     ]);
     
     return (
-    <div className="semester-page p-8">
-      <h1 className="text-3xl font-bold mb-6">Semesters</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {semester.map((semester) => (
-          <div
+        <div className="semester-page p-8">
+            <NavigationBar />
+            <h1 className="text-3xl font-bold mb-6">Semesters</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {semester.map((semester) => (
+                    <div
             key={semester.id}
             onClick={() => navigate(`/semesters/${semester.id}`)}
             className="p-6 bg-blue-600 text-white rounded-lg shadow cursor-pointer hover:bg-blue-700"

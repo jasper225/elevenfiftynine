@@ -1,8 +1,11 @@
 import React from "react";
+import NavigationBar from '../components/navbar/NavigationBar';
+
 
 export default function SemesterPage() { 
     return (
     <div className="semester-page p-8">
+        <NavigationBar />
         <h1 className="text-3xl font-bold mb-6">Semester Page</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="p-6 bg-blue-600 text-white rounded-lg shadow">

@@ -3,6 +3,7 @@ import { DndContext } from '@dnd-kit/core';
 import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable';
 import { arrayMove } from '@dnd-kit/sortable';
 import CardItem from '../components/card/CardItem';
+import NavigationBar from '../components/navbar/NavigationBar';
 
 export default function CoursePage() { 
     const [lists, setLists] = React.useState([
@@ -50,6 +51,7 @@ export default function CoursePage() {
     return (
         <DndContext onDragEnd={handleDragEnd}>
         <div className="course-page">
+        <NavigationBar />
         <h1>Course Page</h1>
         <div style={{ display: "flex", gap: "16px" }}>
 

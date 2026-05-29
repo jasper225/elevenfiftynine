@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import NavigationBar from '../components/navbar/NavigationBar';
 
 export default function DashboardPage() {
   const navigate = useNavigate();
@@ -11,6 +12,7 @@ export default function DashboardPage() {
 
   return (
     <div className="dashboard-page p-8">
+      <NavigationBar />
       <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {courses.map((course) => (
