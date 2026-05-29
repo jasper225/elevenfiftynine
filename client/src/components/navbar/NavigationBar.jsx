@@ -1,5 +1,5 @@
 import React from "react";
-
+import './NavigationBar.css';
 
 export default function NavigationBar() { 
     return <div className="p-4 bg-gray-800 text-white font-bold">
