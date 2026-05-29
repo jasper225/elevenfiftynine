@@ -24,12 +24,11 @@ App runs at `http://localhost:5173`, API at `http://localhost:5000`.
 ## Features
 
 - ✅ JWT auth with refresh tokens + Google OAuth
-- ✅ Workspaces with member roles
-- ✅ Boards with background themes and visibility settings
-- ✅ Lists and cards with drag-and-drop reordering
-- ✅ Card details: description, due dates, labels, checklists, attachments
+- ✅ Semesters which can be archived
+- ✅ Courses with four different lists of Due, Submitted, Graded, and Upcoming
+- ✅ Lists consisting of assignment cards with drag-and-drop reordering
+- ✅ Card details: assignment names and due dates
 - ✅ Real-time collaboration via Socket.io
-- ✅ Activity log per board
 - ✅ File attachments via Cloudinary
 
 ## Deployment
