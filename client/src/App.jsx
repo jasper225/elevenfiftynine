@@ -22,7 +22,7 @@ export default function App() {
 
       <Route element={<ProtectedRoute />}>
         <Route path="/dashboard"              element={<DashboardPage />} />
-        <Route path="/semester/:semesterId" element={<SemesterPage />} />
+        <Route path="/semester"               element={<SemesterPage />} />
         <Route path="/course/:courseId"         element={<CoursePage />} />
         <Route path="/profile"               element={<ProfilePage />} />
       </Route>
